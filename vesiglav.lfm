@@ -24848,6 +24848,14 @@ object FVesi: TFVesi
     }
     Stretch = True
   end
+  object SpeedButton1: TSpeedButton
+    Left = 0
+    Height = 22
+    Top = 0
+    Width = 105
+    Caption = 'О программе'
+    OnClick = SpeedButton1Click
+  end
   object Timer1: TTimer
     Interval = 200
     OnTimer = Timer1Timer

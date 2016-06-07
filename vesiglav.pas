@@ -43,7 +43,7 @@ interface
 
 uses
   Classes, SysUtils, FileUtil, Forms, Controls, Graphics, Dialogs, ExtCtrls,
-  StdCtrls, LCLType;
+  StdCtrls, LCLType, Buttons;
 
 type
   TChashka = record
@@ -56,6 +56,7 @@ type
 
   TFVesi = class(TForm)
     pole: TImage;
+    SpeedButton1: TSpeedButton;
     Timer1: TTimer;
     procedure chisloMouseDown(Sender: TObject; Button: TMouseButton;
       Shift: TShiftState; X, Y: integer);
@@ -68,6 +69,7 @@ type
     procedure FormResize(Sender: TObject);
     procedure polePaint(Sender: TObject);
     procedure poleResize(Sender: TObject);
+    procedure SpeedButton1Click(Sender: TObject);
     procedure Timer1Timer(Sender: TObject);
   private
     ugol: real;
@@ -201,6 +203,11 @@ begin
   end;
   pole.Invalidate;
   //pole.Canvas.Ellipse(0,0,pole.Width,pole.Height);
+end;
+
+procedure TFVesi.SpeedButton1Click(Sender: TObject);
+begin
+  Aboutformvesi.Show;
 end;
 
 procedure TFVesi.Timer1Timer(Sender: TObject);
